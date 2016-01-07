@@ -1,0 +1,76 @@
+input[type=checkbox]{
+  display:none;
+}
+.icon{
+  display:block;
+  width:50px;
+  height:50px;
+  background-size:contain;
+}
+label,
+nav a{
+  cursor:pointer;
+}
+label:hover,
+nav a:hover{
+  background-color:#69c;
+}
+header{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  line-height:50px;
+  background-color:#2b5a77;
+  color:#fff;
+  min-height:50px;
+}
+#hamburger{
+  order:99;
+}
+nav{
+  flex-grow:1;
+  display:flex;
+  flex-direction:row;
+  justify-content:flex-end;
+}
+nav a{
+  display:block;
+  border-style:dotted;
+  border-color:#69c;
+  border-width:0;
+  padding:0 20px;
+  text-align:center;
+}
+@media (min-width:601px){
+  #hamburger{
+    display:none;
+  }
+  nav a{
+    border-left-width:1px;
+  }
+}
+@media (max-width:600px){
+  header{
+    display:block;
+  }
+  h1{
+    float:left;
+  }
+  #hamburger{
+    float:right;
+  }
+  #toggle+header nav{
+    display:block;
+    clear:both;
+    width:100%;
+    overflow:hidden;
+    transition:max-height 0.2s;
+    max-height:0px;
+  }
+  #toggle:checked+header nav{
+    max-height:150px;
+  }
+  nav a{
+    border-top-width:1px;
+  }
+}

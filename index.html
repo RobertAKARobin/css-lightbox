@@ -7,63 +7,42 @@
   margin:0;
   padding:0;
   border:0;
+  font-size:inherit;
+  font-weight:inherit;
+  color:inherit;
+  box-sizing:border-box;
 }
 body{
   position:relative;
   min-width:100vw;
   min-height:100vh;
-}
-.image_sm{
-  display:block;
-  width:240px;
-  height:180px;
-}
-.image_sm img{
-  display:block;
-  width:240px;
-  height:180px;
-}
-.image_show{
-  display:block;
-  position:fixed;
-  width:100vw;
-  height:100vh;
-  opacity:0;
-  top:0;
-  left:-100vw;
-  transition:opacity 0.3s, left 0.3s;
-  -webkit-transition:opacity 0.3s, left 0.3s;
-}
-.image_show:focus{
-  outline:none;
-}
-.image_show:target{
-  opacity:1;
-  left:0;
-}
-.image_show img{
-  display:block;
-  margin-top:50px;
-  margin-left:auto;
-  margin-right:auto;
-  border:20px solid #fff;
-  border-radius:10px;
-  box-shadow:0px 0px 100px 0px #666;
+  font-size:18px;
+  line-height:24px;
 }
     </style>
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="lightbox.css" />
   </head>
   <body>
-    <div class="container">
-      <main>
-        <a href="#image_big" class="image_sm">
-          <img src="placebear.jpg" alt="Roar" />
-        </a>
-      </main>
-      <div>
-        <a href="#" id="image_big" class="image_show">
-          <img src="placebear.jpg" alt="Roar" width="600" height="450" />
-        </a>
-      </div>
+    <input type="checkbox" id="toggle" />
+    <header>
+      <h1>Bear Photos r Us</h1>
+      <label id="hamburger" for="toggle" class="icon" style="background-image:url(hamburger.png);"></label>
+      <nav>
+        <a>Menu 1</a>
+        <a>Menu Dos</a>
+        <a>Last Menu</a>
+      </nav>
+    </header>
+    <main>
+      <a href="#image_big" class="image_sm">
+        <img src="placebear.jpg" alt="Roar" />
+      </a>
+    </main>
+    <div>
+      <a href="#" id="image_big" class="image_show">
+        <img src="placebear.jpg" alt="Roar" />
+      </a>
     </div>
   </body>
 </html>
