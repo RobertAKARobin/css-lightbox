@@ -1,4 +1,4 @@
-input[type=checkbox]{
+input[type=checkbox].toggle{
   display:none;
 }
 .icon{
@@ -6,14 +6,7 @@ input[type=checkbox]{
   width:50px;
   height:50px;
   background-size:contain;
-}
-label,
-nav a{
   cursor:pointer;
-}
-label:hover,
-nav a:hover{
-  background-color:#69c;
 }
 header{
   line-height:50px;
@@ -28,6 +21,10 @@ nav a{
   border-width:0;
   text-align:center;
 }
+.hamburger:hover,
+nav a:hover{
+  background-color:#69c;
+}
 
 @media (min-width:601px){
   header{
@@ -38,7 +35,7 @@ nav a{
     justify-content:space-between;
     -webkit-justify-content:space-between;
   }
-  #hamburger{
+  .hamburger{
     display:none;
   }
   nav{
@@ -64,10 +61,10 @@ nav a{
   h1{
     float:left;
   }
-  #hamburger{
+  .hamburger{
     float:right;
   }
-  #toggle+header nav{
+  .toggle+header nav{
     display:block;
     clear:both;
     width:100%;
@@ -76,7 +73,7 @@ nav a{
     -webkit-transition:max-height 0.2s;
     max-height:0px;
   }
-  #toggle:checked+header nav{
+  .toggle:checked+header nav{
     max-height:150px;
   }
   nav a{
